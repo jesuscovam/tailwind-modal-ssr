@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from './Modal'
+import Modal from './modal'
 import {FiX} from 'react-icons/fi'
 import {FcGoogle} from 'react-icons/fc'
 import { SiFacebook, SiApple } from 'react-icons/si'
