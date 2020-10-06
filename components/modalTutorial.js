@@ -4,6 +4,7 @@ import {FcGoogle} from 'react-icons/fc'
 import { SiFacebook, SiApple } from 'react-icons/si'
 import { HiOutlineMail } from 'react-icons/hi'
 import { motion } from 'framer-motion'
+import Modal from './modal'
 
 const ModalTutorial = () => {
   const [modal, setModal] = useState(false)
@@ -11,15 +12,10 @@ const ModalTutorial = () => {
   return (
     <div>
       <button onClick={toggleModal} className='px-4 py-2 rounded shadow bg-pink-500 text-white focus:outline-none'>toggle modal</button>
-      {modal && 
-        <div className='absolute z-40 inset-0 opacity-25 bg-black'>
-        </div>}
+  
+      <Modal isOpen={modal}>
 
-        {modal && 
-        <motion.div initial={{ opacity: 0, y: 0 }} animate={{opacity: 1, y: -50 }}
-          className='fixed overflow-x-hidden overflow-y-auto inset-0 flex justify-center items-center z-50'>
-          <div className='relative mx-auto w-auto max-w-2xl'>
-            <main className='bg-white py-4 px-5 rounded shadow-lg flex flex-col justify-center items-center text-center'>
+      <main className='bg-white py-4 px-5 rounded shadow-lg flex flex-col justify-center items-center text-center'>
               <header className='self-end'>
                 <FiX aria-label='cancelar modal' className='cursor-pointer text-black rounded-full p-1 text-xl transition duration-300 hover:bg-gray-600 hover:text-gray-200' onClick={toggleModal}/>
               </header>
@@ -56,8 +52,9 @@ const ModalTutorial = () => {
                 <button className='ml-2 font-bold'>Iniciar Sesión</button>
               </div>
             </main>
-          </div>
-        </motion.div>}
+       
+      </Modal>
+    
     </div>
   );
 }
