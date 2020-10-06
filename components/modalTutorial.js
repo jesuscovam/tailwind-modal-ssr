@@ -1,4 +1,8 @@
 import React, {useState} from 'react';
+import {FiX} from 'react-icons/fi'
+import {FcGoogle} from 'react-icons/fc'
+import { SiFacebook, SiApple } from 'react-icons/si'
+import { HiOutlineMail } from 'react-icons/hi'
 
 const ModalTutorial = () => {
   const [modal, setModal] = useState(false)
@@ -13,11 +17,40 @@ const ModalTutorial = () => {
         {modal && 
         <div className='fixed overflow-x-hidden overflow-y-auto inset-0 flex justify-center items-center z-50'>
           <div className='relative mx-auto w-auto max-w-2xl'>
-            <div className='bg-white w-full rounded shadow-lg'>
+            <main className='bg-white p-4 rounded shadow-lg flex flex-col justify-center items-center text-center'>
+          <h1 className='text-lg font-bold'>Registrate en Slissto</h1>
 
-            <span>Id culpa ex veniam officia deserunt consectetur sint amet commodo amet ex. Consectetur aliqua magna voluptate pariatur do officia proident. Laborum voluptate incididunt non ullamco ut consequat laborum. Mollit qui id irure enim quis nostrud dolor occaecat sunt qui aliqua voluptate. Officia labore in quis laboris labore elit duis qui fugiat amet. Laborum id exercitation culpa aliquip anim irure ad mollit.</span>
-            <button className='rounded px-4 py-2 shadow bg-red-500 text-white' onClick={toggleModal}>Close</button>
+          <div className='divide-y divide-gray-900'>
+            <section className='mt-10 mb-5 space-y-4 flex flex-col items-center justify-center'>
+              <div aria-label='button' className='px-4 py-2 flex justify-between items-center space-x-5 border-gray-800 shadow rounded w-full cursor-pointer'>
+                <FcGoogle />
+                <p className='text-sm font-light'>Continuar con Google</p>
+              </div>
+              <div aria-label='button' className='px-4 py-2 flex justify-between items-center space-x-5 border-gray-800 shadow rounded w-full cursor-pointer'>
+                <SiFacebook />
+                <p className='text-sm font-light'>Continuar con Facebook</p>
+              </div>
+              <div aria-label='button' className='px-4 py-2 flex justify-between items-center space-x-5 border-gray-800 shadow rounded w-full cursor-pointer'>
+                <SiApple />
+                <p className='text-sm font-light'>Continuar con Apple</p>
+              </div>
+            </section>
+            <section className='mt-5 pt-5'>
+              <div 
+                
+                aria-label='button' className='px-4 py-2 flex justify-between items-center space-x-5 border-gray-800 shadow rounded w-full cursor-pointer'>
+                  <HiOutlineMail />
+                  <p className='text-sm font-light'>Continuar con Correo</p>
+                </div>
+            </section>
+
+          </div>
+
+          <div className='mt-10 flex justify-around text-xs font-light'>
+              <p>¿Ya tienes una cuenta?</p>
+              <button className='ml-2 font-bold'>Iniciar Sesión</button>
             </div>
+        </main>
           </div>
         </div>}
     </div>
