@@ -1,8 +1,4 @@
-import React, {useState} from 'react';
-import {FiX} from 'react-icons/fi'
-import {FcGoogle} from 'react-icons/fc'
-import { SiFacebook, SiApple } from 'react-icons/si'
-import { HiOutlineMail } from 'react-icons/hi'
+import React from 'react';
 import { motion } from 'framer-motion'
 
 const Modal = ({ isOpen,  children }) => {
