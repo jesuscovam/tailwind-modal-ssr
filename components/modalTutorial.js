@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import ModalLogin from './modalLogin'
+// import ModalLogin from './modalLogin'
 import ModalSlissto from './modalSlissto'
 
 const ModalTutorial = () => {
